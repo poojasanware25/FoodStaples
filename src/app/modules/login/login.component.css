@@ -1,0 +1,218 @@
+.login{
+    /* background-color: grey; */
+    background: linear-gradient(rgba(32, 30, 30, 0.5), rgba(32, 30, 30, 0.5)),url("/assets/images/loginbg.PNG");
+    /* https://image.freepik.com/free-photo/top-view-bowl-with-lentils-variety-condiments_1220-423.jpg */
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: initial;
+     /* height: 100%; */
+     /* opacity: 0.5;
+      */
+  }
+  
+  .main {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+   
+  }
+  .authBox {
+    width:700px;
+    overflow:hidden;
+    margin:80px auto 30px;
+    
+  }
+  .leftBox {
+    width:  300px;
+    height:480px;
+    float:left;
+    position: relative;
+    display: block;
+    
+  }
+  .bgGreen {
+    width:100%;
+    height:100%;
+    background-color: rgb(12, 3, 37);
+    border-top-left-radius:90px;
+  }
+  .imageAuth{
+    background-image: url("/assets/images/loginleft.jpg");
+    width:100%;
+    height:100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 90px;
+    /* opacity: 0.5; */
+    position: absolute;
+    top:0;
+    left:0;
+  }
+  .imageText{
+    font-size:28px;
+    position:absolute;
+    color:#ffffff;
+  
+  }
+  .imageText.bold{
+    font-weight:bold;
+  
+  }
+  .imageText.style1{
+    top:200px;
+    left:20px;
+  
+  }
+  .imageText.style2{
+    top:250px;
+    left:20px;
+  }
+  .rightBox{
+    width:398px;
+    height:479px;
+    float:right;
+    /* border:1px solid rgb(55, 27, 131); */
+    background-color: white;
+    border-bottom-right-radius: 90px;
+    
+  }
+  .box{
+    width:310px;
+    height:415px;
+    margin:32px auto;
+  }
+  
+  .titleAuth{
+    font-size:22px;
+    text-align:center;
+    font-weight:bold;
+    margin-bottom:30px;
+    color:rgb(55, 27, 131);
+  }
+  /* .inputSBox{
+    width:300px;
+    height:42px;
+    border-bottom:2px solid #d8d8d8;
+    margin-bottom:10px;
+  } */
+  
+  
+  .text1{
+    float: right;
+    font-size:14px;
+    color: #006cbc;
+    cursor:pointer;
+  }
+  .btnAuth_login{
+    width:300px;
+    height:47px;
+    color:#ffffff;
+    /* background-color: rgb(55, 27, 131); */
+    text-align:center;
+    /* line-height:47px; */
+    border-radius: 40px;
+    margin-top: 30px;
+    left:760px;
+    /* position:fixed;*/
+    cursor:pointer;
+    border: 1px solid black;
+    background: linear-gradient(to right, #3346eb, #c54205);
+    font-size: larger;
+  }
+  
+  
+  
+  
+  
+  
+  .borderBox{
+    width:300px;
+    height:47px;
+    position:relative;
+    margin:20px 0;
+  }
+  .line{
+    border-bottom:2px sloid #d8d8d8;
+    position:absolute;
+    top:22px;
+    width:100px;
+  }
+  .text2{
+    font-size:14px;
+    color:#818487;
+  }
+  .text2.or{
+    position:absolute;
+    top:14px;
+    left:140px;
+    width:25px;
+    height:16px;
+    background-color: #ffffff;
+    text-align:center;
+  }
+  .errorMsg {
+    color: #cc0000;
+    margin-bottom: 12px;
+  }
+  .showError{    
+    border-color: #a94442 !important;    
+    color: #a94442 !important;    
+    margin-bottom: 15px;    
+  }
+  
+  h6
+  {
+    text-align:center;
+    /* font-weight:bold; */
+    margin-bottom:15px;
+    color:rgb(55, 27, 131);   
+  }
+  
+  .logo{
+   
+    margin-left: 120px;
+    width: 60px;
+    height: 60px;
+  }
+  
+  
+  .input-group-prepend span{
+    width: 50px;
+    background: linear-gradient(to right, #3346eb, #c54205);
+  
+    color: black;
+    border:0 !important;
+    }
+    
+    input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+    
+    }
+  
+  
+  @media screen and  (max-width: 768px){
+  .authBox {
+    width: 100%;
+  }
+  .leftBox{
+  display: none;
+  }
+  .rightBox{
+  width:100%;
+  float:initial;
+  border:0;
+  border-radius: 0ch;
+  /* border-color: orange;
+  border-width:2px ; */
+  border:1px solid #4c2105;
+  }
+  .login{
+    width: 100%;
+  }
+  
+  
+  }

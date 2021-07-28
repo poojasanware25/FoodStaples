@@ -1,0 +1,68 @@
+<div class="login">
+  
+    <div class="main">
+<div class="authBox">
+    <div class="leftBox">
+        <div class="bgGreen"></div> 
+        <div class="imageAuth"></div>
+        <div class="imageText bold style1"></div>
+        <div class="imageText style2"></div>
+    </div>
+    <div class="rightBox">
+        <div class="box">
+            <img src="/assets/images/logo.png" class="logo"><br><br>
+            <h6>Welcome Back</h6>
+            <div class="titleAuth">Login your account</div>
+
+
+                 <form [formGroup]="loginfrm" (ngSubmit)="loginUser()">
+                
+                
+                    <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                
+                      </div>
+                   <input class="form-control" name="Email" formControlName="uname"
+                  
+                    type="email" placeholder="Email"  [(ngModel)]="user.email" required />
+                    </div>
+                  
+
+                
+                    <div class="input-group form-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                      </div>
+                    <input class="form-control" type="password" name="Password"  formControlName="pwd" [(ngModel)]="user.password"
+                    
+                      placeholder="Password"  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                      title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                       />
+                      
+                     </div>
+                
+                <a style="float: right;"[routerLink]="['/forgotpassword']">forgot password?</a>
+
+
+                <div><button class="btnAuth_login" type="submit">
+                    Login
+                    
+                  </button>
+                </div>
+
+            </form>
+
+
+           
+            <div class="borderBox">
+                <div class="line"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+</div>

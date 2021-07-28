@@ -1,0 +1,213 @@
+<div class="wrapper">
+    <div class="bg">
+        <div class="main_container">
+
+            <div class="item">
+               <h1 class="quote">Our Food Is Homemade, Healthy And Hygienic</h1>
+
+            </div>
+            <!--=======-----------Card Section-----====================-->
+            <!-- <div style="display: flex; flex-grow: grow;"> -->
+            <div class="item2">
+                <section id="food">
+                    <div>
+                        <h2 class="title-text"> Today's Food Menu</h2>
+
+                    </div>
+
+                    <div class="food-container">
+                        <!--======Card Start ----============-->
+                        <article class="food-card">
+                            <img src="/assets/images/snacks.jpg"
+                                class="food-img" alt="snacks">
+                            <div class="img-text">
+                                <h1>Snacks</h1>
+                            </div>
+                            <!-- <div class="img-footer">
+
+                                <div class="footer-btn">
+                                    <button class="btn btn-light food-btn">View Menu</button>
+                                </div>
+                            </div> -->
+                            <div class="menulist">
+                                <h4 class="menu-heading">Snacks Menu</h4>  
+                                <hr><br>
+                               <!-- <p>Pizza&nbsp;|&nbsp;Burger&nbsp;|&nbsp;Poha&nbsp;|&nbsp;Sandwitch
+                                &nbsp;|&nbsp;Tea&nbsp;|&nbsp;Dosa
+                               </p> -->
+                             <ol>
+                                 <div *ngFor="let menu of lstmenu"
+                                 [ngSwitch]="menu.meal_type">
+                                   <li class="menu-items" *ngSwitchCase="'Snacks'">
+                                      <br> {{menu.description}} <br> <br>
+                                      Price :{{menu.price | currency:'INR':'symbol-narrow':'4.2-2'}}
+                                    </li>
+                                
+                                 </div>
+                               </ol>
+                               
+                            </div>
+
+                        </article>
+                        <article class="food-card">
+                            <img src="/assets/images/lunch.jpg"
+                                class="food-img" alt="lunch">
+                            <div class="img-text">
+                                <h1>Lunch</h1>
+                            </div>
+                            <!-- <div class="img-footer">
+
+                                <div class="footer-btn">
+                                    <button class="btn btn-light food-btn">View Menu</button>
+                                </div>
+                            </div> -->
+                            <div class="menulist">
+                                <h4 class="menu-heading">Lunch Menu</h4>  
+                                <hr><br>
+                               <!-- <p>Pizza&nbsp;|&nbsp;Burger&nbsp;|&nbsp;Poha&nbsp;|&nbsp;Sandwitch
+                                &nbsp;|&nbsp;Tea&nbsp;|&nbsp;Dosa
+                               </p> -->
+                               <ol >
+                                <div *ngFor="let menu of lstmenu"
+                                [ngSwitch]="menu.meal_type">
+                                   <li class="menu-items" *ngSwitchCase="'Lunch'">
+                                    <br> {{menu.description}} <br> <br>
+                                   Price :{{menu.price | currency:'INR':'symbol-narrow':'4.2-2'}}
+                                   </li>
+                                  </div>
+                               </ol>
+                            </div>
+                        </article>
+                        <article class="food-card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPqWEiVjWr4UltICUB3xu5rXOSeMuUsMk-NpVvk0OZYhuxI1bj2XuYAAz53Ka8V75W_YU&usqp=CAU"
+                                class="food-img" alt="dinner">
+                            <div class="img-text">
+                                <h1>Dinner</h1>
+                            </div>
+                            <!-- <div class="img-footer">
+
+                                <div class="footer-btn">
+                                    <button class="btn btn-light food-btn">View Menu</button>
+                                </div>
+                            </div> -->
+                            <div class="menulist">
+                                <h4 class="menu-heading">Dinner Menu</h4>  
+                                <hr><br>
+                               <!-- <p>Pizza&nbsp;|&nbsp;Burger&nbsp;|&nbsp;Poha&nbsp;|&nbsp;Sandwitch
+                                &nbsp;|&nbsp;Tea&nbsp;|&nbsp;Dosa
+                               </p> -->
+                               <ol >
+                                <div *ngFor="let menu of lstmenu"
+                                [ngSwitch]="menu.meal_type">
+                                   <li class="menu-items" *ngSwitchCase="'Dinner'">
+                                    <br> {{menu.description}} <br> <br>
+                                    Price :{{menu.price | currency:'INR':'symbol-narrow':'4.2-2'}}
+                                   </li>
+                                 </div>
+                               </ol>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!--======End of Card =========-->
+
+            <!--=====End of Card Section=================-->
+
+
+
+
+
+            <!--======announcement section =========-->
+
+            <div style="display: flex; flex-grow: grow;">
+
+                <div class="card">
+                    <!-- <h2 class="title-text"> Booking Status</h2>
+                    <div class="fakeimg">
+                    <h4>  Status     :  {{status.approved}}</h4><br>
+                        <div class="cardd">
+                     Expires On : {{status.end_dt}}</div>
+                 </div> -->
+
+
+
+                 <div class="flexbox">
+                   
+                   
+                    <div class="flexcard flexcardOrange">
+                        <div class="flexcardNumber flexcardNumberOrange">Booking Status</div>
+                        <!-- <div class="flex flexcardTitle">Title</div> -->
+                        <div class="flex flexcardText" style="padding-top:35px;">
+                            <h4>&nbsp; Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                                &nbsp;&nbsp;&nbsp;{{status.approved}}<br><br>
+
+                               &nbsp;  Expires On&nbsp; : 
+                                &nbsp;&nbsp;&nbsp;{{status.end_dt| date}}</h4>
+                        </div>
+                    </div>
+                   
+                 </div>
+
+                
+            
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+                </div>
+
+               
+                <div class="card2">
+                    <!-- <h2 class="title-text">Announcement</h2>
+                   
+                    <div class="fakeimg" *ngFor="let news of lstnews">
+                        <h2>{{news.food_available}} </h2>
+                        <marquee width="100%" direction="up" height="190px" >
+                       <h4> we are not able to provide meal from {{news.start_dt}}
+                        to {{news.end_dt}} due to  {{news.reason}}.</h4></marquee>
+                        
+                        
+
+                    </div> -->
+
+
+
+                    <div class="flexbox">
+                        <div class="flexcard flexcardOrange">
+                           <div class="flexcardNumber flexcardNumberOrange">Announcement</div>
+                           <!-- <div class="flex flexcardTitle">Title</div> -->
+                           <div class="flex flexcardText" *ngFor="let news of lstnews">
+                               
+                            <marquee width="100%" direction="up" height="190px" >
+                                <h4> we are not able to provide meal from {{news.start_dt}}
+                                 to {{news.end_dt}} due to  {{news.reason}}.</h4></marquee>
+                            </div>
+                           
+                       </div>
+                         </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

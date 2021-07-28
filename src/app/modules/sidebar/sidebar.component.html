@@ -1,0 +1,102 @@
+<div class="wrapper">
+
+	<div class="top_navbar">
+		<div class="hamburger">
+			<div class="one"></div>
+			<div class="two"></div>
+			<div class="three"></div>
+		</div>
+		<div class="top_menu">
+			<div class="logo">
+				<img class="aitlogo" src="/assets/images/logo.png" height="55"
+					width="55" (click)="Dashboard()">
+
+				
+					
+			</div>
+
+			<!-- days left section  -->
+			<!-- <div>
+				<span class="remindercls" >
+					<span class="daysvalue">{{meal}}</span>
+					left for Booking Expires
+				</span>
+			</div> -->
+
+			
+			<ul>
+				<!-- <li><a href="#">
+						<i class="fas fa-search"></i>
+					</a></li>
+				<li><a href="#">
+						<i class="fas fa-bell"></i>
+					</a></li> -->
+				
+				<li><a href="#">
+				
+						<i class="fas fa-user"></i>
+					</a></li>
+					<li><h4 class="user"> Hi {{xyz}},&nbsp;{{username}}</h4></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<li>
+					 <li><a title="logout" (click)="LogoutUser()">
+					<i class="fa fa-sign-out"></i>
+					 </a></li>
+				
+			</ul>
+		</div>
+	</div>
+	
+		<div class="sidebar">
+
+			<ul>
+				<li><a (click)="Dashboard()">
+						<span class="icon"><i class="fas fa-home"></i></span>
+						<span class="title">Dashboard</span>
+					</a></li>
+
+					<li><a [routerLink]="['/profile']">
+						<span class="icon"><i class="fas fa-user"></i>
+							</span>
+						<span class="title">Profile</span>
+					</a></li>
+
+				<li><a (click)="BookMeal()">
+						<span class="icon"><i class="fas fa-utensils"></i>
+						</span>
+						<span class="title">New Booking</span>
+					</a></li>
+				<li><a (click)="Details()">
+						<span class="icon"><i class="fas fa-info-circle"></i>
+						</span>
+						<span class="title">Booking Details</span>
+					</a></li>
+				<li><a (click)="editItem(meal)" class="active">
+						<span class="icon"><i class="fa fa-calendar"></i>
+						</span>
+						<span class="title">Extend Date</span>
+					</a></li>
+
+					<li><a (click)="Bill()">
+						<span class="icon"><i class="fas fa-file-invoice"></i>
+						</span>
+						<span class="title">Invoice</span>
+					
+					</a></li>
+
+					<!-- <div *ngIf="today!=lastDayOfMonth">
+						
+					<li><a (click)="Feedback()">
+						<span class="icon"><i class="fas fa-envelope-open-text"></i>
+						
+						
+						</span>
+						<span class="title">Feedback</span>
+					
+					</a></li>
+						</div> -->
+<!-- <li>	&nbsp;&nbsp;&nbsp;Date:	{{date  | date:'yyyy-MM-dd'}}</li> -->
+					
+			</ul>
+		</div>
+
+	

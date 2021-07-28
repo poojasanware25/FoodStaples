@@ -1,0 +1,50 @@
+<app-sidebar></app-sidebar>
+
+<div class="wrapper">
+  <div class="bg">
+
+    <div class="main_container">
+
+      <div class="card">
+        <h2 class="title-text">Booking Details</h2>
+
+        <div class="fakeimg">
+
+          <div *ngFor="let menu of lstmenu" [ngSwitch]="menu.username">
+            <div *ngSwitchCase="username2">
+
+              <p>Order ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{menu.meal_id}} </p>
+
+
+
+              <p>Meal Type &nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{menu.meal_type}}
+              </p>
+
+
+              <p>Start Date &nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{menu.meal_dt}}
+              </p>
+
+              <p>End Date &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{menu.end_dt}} &nbsp;&nbsp;
+              </p>
+
+
+              <p>Price &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {{menu.price | currency:'INR':'symbol-narrow':'2.2-2'}}
+              </p>
+              <hr>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

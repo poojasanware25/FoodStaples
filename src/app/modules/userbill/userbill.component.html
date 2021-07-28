@@ -1,0 +1,44 @@
+<app-sidebar></app-sidebar>
+<div class="wrapper">
+    <div class="bg">
+      
+        <div class="main_container">
+            <div class="card">
+               
+         
+			<h1 class="title">Bill Receipt</h1>
+			<table class="invoice"  >
+             
+                   <tr> 
+					<th><span >Invoice #</span></th>
+					<td ><span > {{bill.billId}}</span></td>
+				</tr>
+                 <tr>
+					<th><span >Username</span></th>
+					<td><span > {{bill.username}}</span></td>
+				</tr>
+				<tr>
+					<th><span>Month</span></th>
+					<td><span >{{bill.month}}</span>
+					</td>
+				
+				</tr>
+                <tr>
+					<th><span>Year</span></th>
+					<td><span >{{bill.year}}</span></td>
+				</tr>
+				<tr>
+					<th><span >Total</span></th>
+					<td><span >{{bill.bill| currency:'INR':'symbol-narrow':'4.2-2'}}</span></td>
+				</tr> 
+             <!-- </div> -->
+        <!-- </div>  -->
+			</table>
+       
+
+           
+        </div>
+        </div>
+    </div>
+    </div>
+    

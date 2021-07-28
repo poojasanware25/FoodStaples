@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif; */
+  }
+
+.wrapper .main_container {
+    width: (100% - 200px);
+    margin-top: 60px;
+    margin-left: 200px;
+    padding: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .wrapper .main_container .item{
+    background: #2e4ead;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 14px; 
+    line-height: 22px;
+    margin-right: 20px;
+    
+    border-style:solid;
+    border-width:1px;  
+    border-radius: 5px;
+    border-color:#92a6e2;
+  }
+
+  .wrapper.active .main_container{
+    width: (100% - 70px);
+    margin-left: 70px;
+  }
+  
+  
+  .quote{
+    text-align: center;
+    color: white
+   
+  }
+
+  .title-text{
+    text-align: center;
+    color: #4360b5;  
+    text-transform: uppercase; 
+    /* margin-left: 360px; */
+}
+
+  .wrapper{
+    margin: 10px;
+  }
+  .bg{
+    background: #e8edf5;
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+    
+  
+  }
+  
+  
+
+  /*==========Cards Section========*/
+#food{
+    padding: 20px ;
+   
+}
+.food-container{
+     max-width: 80vw;
+    margin: 0 auto 0 1px;/* 120px image center*/
+  
+   
+}
+.food-card{
+    position: relative;
+    background: linear-gradient(rgba(205, 96, 0, 0.7),rgba(205,96,0,0.7));
+    margin:20px 0;
+    color: #000;
+    overflow: hidden;
+    padding: 3px;
+    border-radius: 16px;
+    border: 1px solid orange;
+    box-shadow: 2px 3px 1px 1px #cd6100;
+   
+}
+
+#food img{
+    width: 100%;
+    /* min-height: 100%; */
+    /* min-height: 40%;aaaa */
+    height: 50%;
+    display: block;
+    transition: transform 4s;
+}
+
+.img-text{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 4s;
+
+}
+/* .img-footer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    font-size: 20px;
+    opacity: 0;
+    color: #000;
+    transition: opacity 4s;
+   
+} */
+.img-text h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.food-card:hover img{
+    opacity: 0.4;
+    transform: scale(1.3);
+}
+.food-card:hover .img-text,
+.food-card:hover  .img-footer{
+    opacity:1;
+}
+.food-btn{
+    /* display: inline-block;
+    background:#2e4ead;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 12px 32px;
+    color: #fff;
+    font-weight: bold; */
+    /* border-radius: 150px; */
+    /* cursor: pointer;
+    margin-top: 16px;
+    transition: all 0.3s ease-in-out;
+    font-size:11px;*/
+    outline:none;
+     border: #2e4ead; 
+     color: #fff;
+     background:#2e4ead;
+     transition: all 0.3s ease-in-out;
+     padding: 2px 6px;
+     border-radius: 150px;
+    
+  
+   
+}
+.food-btn:hover{
+    color: orange;
+    background:#ffff;
+    border: #2e4ead;
+    outline: none;
+}
+.fas{
+    font-size: 30px;
+}
+ .item2{
+background: #fff;
+margin-bottom: 10px;
+padding: 15px;
+font-size: 14px; 
+line-height: 22px;
+margin-right: 20px;
+
+border-style:solid;
+border-width:1px;  
+border-radius: 5px;
+border-color:#92a6e2;
+
+}
+
+
+
+
+
+@media screen and (min-width: 576px){
+    .food-container{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       grid-column-gap: 16px;
+       
+    }
+ 
+  
+}
+@media screen and (min-width: 992px){
+    .food-container{
+     display: grid;
+     grid-template-columns: repeat(3, 2fr);
+     grid-column-gap:16px ;
+    
+    }
+    
+  
+   
+}
+/*========End of Cards Section=======*/
+
+
+.card{
+  padding: 20px;
+  margin-top: 10px;
+  height:350px;
+  border-style:solid;
+  border-width:1px;  
+  border-radius: 5px;
+  border-color:#92a6e2;
+  /* overflow: scroll; */
+  /* width: 45%; */
+  margin-right: 20px;
+  width: 70%;
+}
+.fakeimg {
+  background-color: #e8edf5;
+  width: 100%;
+  padding: 20px;
+  height:auto;
+  font-size: 14px;
+  margin-top:10px;
+/* position: relative; */
+top:5px;
+}
+
+
+.card2{
+  padding: 20px;
+  margin-top: 10px;
+  height:350px;
+  border-style:solid;
+  border-width:1px;  
+  border-radius: 5px;
+  border-color:#92a6e2;
+  overflow: hidden;
+  /* width: 55%; */
+  margin-right: 20px;
+  background-color: white;
+}
+
+
+
+
+.menulist{
+ 
+  width: 100%;
+  margin-top: 20px;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  font-size: 20px;
+  /* padding-left: 100px; */
+  color: #000;
+  transition: opacity 4s;
+ 
+}
+
+hr{
+  height: 3px;
+ width: 70%;
+ margin-left: 50px;
+ 
+}
+
+.menu-heading{
+  padding-left: 100px;
+  text-transform: uppercase;
+  /* font-family: 'Oswald', sans-serif; */
+}
+li{
+ 
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+
+/**********Booking Status and Announcement Card ***********/
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* width: 100%;
+  flex-wrap: wrap; */
+  width: 97%;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+.flexcard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* width: 30%; */
+  align-items: baseline;
+  height: 300px;
+  border-radius: 20px;
+  width: inherit;
+}
+
+.flexcardNumber {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 10px 0px;
+  border-radius: 0px 50px 50px 0px;
+  font-family: 'Jost', sans-serif;
+  color: white;
+  text-shadow: 0px 3px 5px black;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+}
+
+.flexcardTitle {
+  font-family: 'Jost', sans-serif;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.flexcardText {
+  font-family: 'Jost', sans-serif;
+  text-align: center;
+  font-weight: 300;
+}
+
+.flexcardNumber:before {
+  content: '';
+  width: 34px;
+  height: 90px;
+  position: absolute;
+  left: -33px;
+  top: 0px;
+  border-radius: 50px 0px 0px 50px;
+  /* z-index: -1; */
+
+  background: -moz-linear-gradient(bottom, #95B7A2, #AED2BC);
+/* background: linear-gradient(to top, #95B7A2, #AED2BC); */;
+}
+
+.flexcardNumber:after {
+  content: '';
+  width: 25px;
+  height: 40px;
+  position: absolute;
+  left: -25px;
+  bottom: -40px;
+  border-radius: 50px 0px 0px 50px;
+  /* z-index: -1; */
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px auto;
+}
+
+img.flexcardimgItem {
+  width: 50%;
+}
+
+
+
+/* ORANGE CARD */
+
+.flexcardOrange {
+  background: #fdf8f3;
+ box-shadow: 4px -2px 1px #F68404;
+}
+
+.flexcardNumberOrange {
+  background: #FDFFFE;
+  background: -webkit-linear-gradient(right, #FDFFFE, #F68404);
+  background: -moz-linear-gradient(right, #FDFFFE, #F68404);
+  background: linear-gradient(to left, #FDFFFE, #F68404);
+  box-shadow: 0px 2px 2px #F68404;
+}
+
+.flexcardNumberOrange:before {
+  background: #F68404;
+}
+
+.flexcardNumberOrange:after {
+  background: #d06f02;
+}
+
+
+
+/* RESPONSİVE */
+
+@media only screen and (max-width: 800px) {
+
+  .flexcard {
+    width: 35%;
+    margin-top: 20px;
+  }
+
+ 
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  .flexcard {
+    width: 70%;
+  }
+
+
+}

@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="feedback">
+      <form [formGroup]="feedbackfrm" (ngSubmit)="Feedback()">
+<h3>We'd Love Your Feedback</h3><br/>
+<label>Meal Type</label>
+<span class="ng-star-inserted" style="color:red;"> *</span>
+<ng-multiselect-dropdown
+[placeholder]="'Select'"
+[settings]="dropdownSettings"
+[data]="dropdownList"
+[(ngModel)]="feedback.meal_type"
+(onSelect)="onItemSelect($event)"
+(onSelectAll)="onSelectAll($event)"
+formControlName="meal_type"
+*ngFor="let meal_type of selectedItems">{{meal_type}}
+>
+</ng-multiselect-dropdown>
+
+<br>
+        <label>How would you rate the quality of our food services
+          <span class="ng-star-inserted" style="color:red;"> *</span>
+        </label>
+        <div *ngIf="feedbackfrm.controls['rating'].invalid && (feedbackfrm.controls['rating'].dirty || feedbackfrm.controls['rating'].touched)"
+class="alert alert-danger">
+<span *ngIf="feedbackfrm.controls['rating'].errors?.required">
+    This is required filed
+</span>
+</div>
+       
+      <div class="rating">
+       
+        <input type="radio" name="rating" id="rating-5" value="*****" formControlName="rating" [(ngModel)]="feedback.rating"
+         >
+        <label for="rating-5"></label>
+        <input type="radio" name="rating" id="rating-4" value="****" formControlName="rating" [(ngModel)]="feedback.rating">
+        <label for="rating-4"></label>
+        <input type="radio" name="rating" id="rating-3" value="***" formControlName="rating" [(ngModel)]="feedback.rating">
+        <label for="rating-3"></label>
+        <input type="radio" name="rating" id="rating-2" value="**" formControlName="rating" [(ngModel)]="feedback.rating">
+        <label for="rating-2"></label>
+        <input type="radio" name="rating" id="rating-1" value="*" formControlName="rating" [(ngModel)]="feedback.rating">
+        <label for="rating-1"></label>
+        
+   </div><br/>
+
+
+    
+<label>Any Other Suggestions:</label>
+<span class="ng-star-inserted" style="color:red;"> *</span>
+<textarea cols="75" name="commentText" rows="5" style="width:320px" formControlName="feedback" [(ngModel)]="feedback.feedback"
+></textarea>
+<div *ngIf="feedbackfrm.controls['feedback'].invalid && (feedbackfrm.controls['feedback'].dirty || feedbackfrm.controls['feedback'].touched)"
+class="alert alert-danger">
+<span *ngIf="feedbackfrm.controls['feedback'].errors?.required">
+    This is required filed
+</span>
+</div>
+
+<br>
+<br>
+<button  type="submit" class="btn button">Submit</button>
+</form>
+    </div>
+  </div>

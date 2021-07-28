@@ -1,0 +1,160 @@
+<app-sidebar></app-sidebar>
+
+<div class="wrapper">
+    <div class="bg">
+
+        <div class="main_container">
+
+            <div class="page-wrapper p-t-180 p-b-100 font-robo">
+                <div class="wrapper wrapper--w960">
+                    <div class="card card-2">
+                        <div class="card-heading"></div>
+                        <div class="card-body">
+                            <h2 class="title">Book Your Meal</h2>
+                            <form [formGroup]="bookmealfrm" (ngSubmit)="bookMeal()">
+                                <!-- <small class="text-danger">{{msg}}</small> -->
+                                <div class="row row-space">
+                                    <div class="col-2">
+                                        Start Date
+                                        <span class="ng-star-inserted" style="color:red;"> *</span>
+                                        <div class="input-group">
+
+                                            <input type="date" placeholder="Start Date" formControlName="meal_dt"
+                                                name="meal_dt" [(ngModel)]="meal.meal_dt">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-2">
+                                        <label>End Date</label>
+                                        <span class="ng-star-inserted" style="color:red;"> *</span>
+                                        <div class="input-group">
+                                            <input type="date" placeholder="End Date" formControlName="end_dt"
+                                                name="end_dt" [(ngModel)]="meal.end_dt">
+
+
+                                        </div>
+                                        <span class="text-danger" *ngIf="error.isError">{{error.errorMessage}}</span>
+                                    </div>
+                                </div>
+
+
+                                <label>Meal Type</label>
+                                <span class="ng-star-inserted" style="color:red;"> *</span>
+                                <ng-multiselect-dropdown [placeholder]="'Select'" [settings]="dropdownSettings"
+                                    [data]="dropdownList" [(ngModel)]="meal.meal_type" (onSelect)="onItemSelect($event)"
+                                    (onSelectAll)="onSelectAll($event)" formControlName="meal_type"
+                                    *ngFor="let meal_type of selectedItems">{{meal_type}}>
+                                </ng-multiselect-dropdown>
+                                <br>
+
+
+                                <!-- 
+                   <div *ngIf="bookmealfrm.controls['meal_type'].invalid && (bookmealfrm.controls['meal_type'].dirty || bookmealfrm.controls['meal_type'].touched)"
+                   class="alert alert-danger">
+                   <div *ngIf="bookmealfrm.controls['meal_type'].errors?.required">
+                       Please select the meal type.
+                   </div>
+               </div> -->
+
+
+
+
+
+
+                                <div class="row row-space">
+                                    <!-- <div class="col-6">
+                            
+                                <label >Meal Type</label>
+                                <select class="form-control custom-select browser-default" id="meal_type" 
+                                 formControlName="meal_type" [(ngModel)]="meal.meal_type" >
+                                    <option disabled="disabled" selected="selected">Select</option>
+                                    <option *ngFor="let meal_type of mealtype">{{meal_type}}</option>
+                
+                                </select>
+
+                                
+                                    
+                            
+                        </div>  -->
+
+
+
+
+
+
+
+
+                                    <!-- <div class="col-5">
+                                <label >Price</label>
+                            <div class="input-group">
+                                <input class="input--style-2" type="text" formControlName="price"
+                                placeholder="Price" name="price" [(ngModel)]="meal.price">
+                            </div>
+                            </div> -->
+
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <div style="margin-top: 30px; height: 45px;" class="input-group">
+                                                <label style="padding-top: 10px;" class="checkbox-inline">
+                                                    <input type="checkbox" name="subscription"
+                                                        formControlName="subscription"
+                                                        [(ngModel)]="meal.subscription">Is monthly subscription?
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-2">
+                                        <label>Discount</label>
+                                        <div class="input-group">
+                                            <input readonly class="input--style-2" type="text" value="{{discount}}%"
+                                                name="discount">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- <div class="input-group">
+                            <input  class="input--style-2" type="text" formControlName="username"
+                         placeholder={{username2}} name="username" [(ngModel)]="meal.username">
+                        </div> -->
+
+                                <!-- demo -->
+                                <!-- <div style="text-align: center;">
+    <i>meal type</i>
+    <select style="width: 100%; height: 80%;" (change)="updateprice($event.target.value)"  formControlName="meal_type" [(ngModel)]="meal.meal_type"> 
+        <option>select</option>
+        <option *ngFor="let mealtype of meals" [value]="mealtype">{{mealtype}}</option>
+    </select>
+
+    <i>price</i>
+    <select style="width: 100%; height: 80%;" formControlName="price" [(ngModel)]="meal.price">
+      
+        <option *ngFor="let price of Price" [value]="price">{{price}}</option>
+       
+    </select>
+</div> -->
+
+
+
+
+
+
+
+                                <div class="p-t-30">
+                                    <button class="button" type="submit">Submit</button>
+                                </div>
+
+                            
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

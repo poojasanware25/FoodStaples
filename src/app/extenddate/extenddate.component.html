@@ -1,0 +1,37 @@
+<div class="modal-header text-white">
+    <h4 class="modal-title" id="modal-basic-title">Extend Expiry Date</h4>
+</div>
+<div class="modal-body" [ngSwitch]="meal.username" >
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" >
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="end_dt" class="col-form-label col-sm-3 text-right label1 " >End Date:</label>
+            <div class="col-sm-5">
+                <input type="date" min="2021-07-01" max="2021-08-30" name="date" formControlName="end_dt" class="form-control" [(ngModel)]="meal.end_dt"
+            	/>
+
+                 <!-- <md-form-field>
+                    <input mdInput
+                           name="start_time"
+                           #start_time="ngModel"
+                           [mdDatepicker]="startDate"
+                           [min]="minDate"
+                           date="true"
+                           [(ngModel)]="planModel.start_time"
+                           placeholder="Choose a date">
+                    <md-datepicker-toggle mdSuffix [for]="startDate"></md-datepicker-toggle>
+                    <md-datepicker [startView]="dateStart" #startDate></md-datepicker>
+                  </md-form-field>
+               -->
+
+            </div>
+        </div>
+
+
+<div class="modal-footer">
+    <button class="btn  mr-2" (click)="modal.close('Cancel')">Cancel</button>
+    <button class="btn  mr-2">Update</button>
+</div>
+
+
+</form>
+</div>
